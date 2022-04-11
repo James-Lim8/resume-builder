@@ -37,45 +37,47 @@ contact["career_objective"] = user_career_obj
 
 # print('Moving to your Skillsets')
 
-# for each_basic_skill in range(2):
-#     each_basic_skill=input("Enter the list of skills you learnt from Basics & Networking: ")
-#     contact["basic_skills"].append(each_basic_skill)
+
+number_of_basic_skills=st.slider('How many Basics & Networking skills would you like to input?',0,20)
+for each_basic_skill in range(number_of_basic_skills):
+    each_basic_skill = st.text_input("Enter the list of skills you learnt from Basics & Networking: ", placeholder=" Linux commands")
+    contact["basic_skills"].append(each_basic_skill)
+
+number_of_soc_skills=st.slider('How many SOC skills would you like to input?',0,20)
+for each_soc_skill in range(number_of_soc_skills):
+    each_soc_skill = st.text_input("Enter the list of skills you learnt from SOC: ", placeholder=" ELK")
+    contact["soc_skills"].append(each_soc_skill)
+
+number_of_pt_skills=st.slider('How many Pen-Test skills would you like to input?',0,20)
+for each_pt_skill in range(number_of_pt_skills):
+    each_pt_skill=st.text_input("Enter the list of skills you learnt from PT: ", placeholder=" msfconsole")
+    contact["pt_skills"].append(each_pt_skill)
+
+number_of_other_skills=st.slider('How many Other skills would you like to input?',0,20)
+for each_other_skill in range(number_of_other_skills):
+    each_other_skill=st.text_input("Enter the list of skills from other areas: ", placeholder=" photoshop / SPSS/ accounting etc.")
+    contact["other_skills"].append(each_other_skill)
 
 
-# for each_soc_skill in range(2):
-#     each_soc_skill=input("Enter the list of skills you learnt from SOC: ")
-#     contact["soc_skills"].append(each_soc_skill)
+#End of getting the skills input
 
+print('Moving on to the projects section. Please provide details of your projects starting from the most recent one')
 
-# for each_pt_skill in range(2):
-#     each_pt_skill=input("Enter the list of skills you learnt from PT: ")
-#     contact["pt_skills"].append(each_pt_skill)
+n=int(input("How many projects information would you like to key in?: "))
 
+all_projects=[]
 
-# for each_other_skill in range(2):
-#     each_other_skill=input("Enter the list of skills from other areas: ")
-#     contact["other_skills"].append(each_other_skill)
+for number_of_projects in range(n):
+    each_proj={}
+    proj_title=input("Please provide the title of the project: ")
+    proj_date=input("Please provide the Start date of the project: ")
+    proj_content=input("Please provide the content of the project: ")
+    contact["pt_skills"].append(proj_title)
+    each_proj["date"] = proj_date
+    each_proj["content"] = proj_content
+    all_projects.append(each_proj)
 
-
-# #End of getting the skills input
-
-# print('Moving on to the projects section. Please provide details of your projects starting from the most recent one')
-
-# n=int(input("How many projects information would you like to key in?: "))
-
-# all_projects=[]
-
-# for number_of_projects in range(n):
-#     each_proj={}
-#     proj_title=input("Please provide the title of the project: ")
-#     proj_date=input("Please provide the Start date of the project: ")
-#     proj_content=input("Please provide the content of the project: ")
-#     contact["pt_skills"].append(proj_title)
-#     each_proj["date"] = proj_date
-#     each_proj["content"] = proj_content
-#     all_projects.append(each_proj)
-
-# contact["projects"]=all_projects
+contact["projects"]=all_projects
 
 # #print(contact)
 
