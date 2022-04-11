@@ -1,7 +1,7 @@
 import streamlit as st
 from docxtpl import DocxTemplate
 
-st.write("# Hello World")
+st.write("# Resume Builder")
 
 st.write("Your particulars!")
 
@@ -19,25 +19,23 @@ contact = {
     "projects": []
 }
 
-user_name = st.text_input('Enter your full name: ', placeholder="Name")
-# user_name = input('Enter your full name: ')
-# user_email = input('Enter your email: ')
-# user_nationality = input('Enter your nationality: ')
-# user_phone = input('Enter your phone number: ')
-# user_github = input('Enter your github link, otherwise put N.A.')
-# user_career_obj = input('Describe your career objectives: ')
+user_name = st.text_input('Enter your full name: ', placeholder=" Full Name")
+user_email = st.text_input('Enter your email: ', placeholder=" Email")
+user_nationality = st.text_input('Enter your nationality: ', placeholder=" Nationality")
+user_phone = st.text_input('Enter your phone number: ', placeholder=" Phone Number")
+user_github = st.text_input('Enter your github link, otherwise put N.A.', placeholder=" Github Link")
+user_career_obj = st.text_area('Describe your career objectives: ', placeholder=" Career Objectives")
 
 contact["name"] = user_name
-# contact["email"] = user_email
-# contact["nationality"] = user_nationality
-# contact["phone"] = user_phone
-# contact["github"] = user_github
-# contact["career_objective"] = user_career_obj
+contact["email"] = user_email
+contact["nationality"] = user_nationality
+contact["phone"] = user_phone
+contact["github"] = user_github
+contact["career_objective"] = user_career_obj
 
 #End of getting user particulars
 
 # print('Moving to your Skillsets')
-
 
 # for each_basic_skill in range(2):
 #     each_basic_skill=input("Enter the list of skills you learnt from Basics & Networking: ")
