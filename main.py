@@ -103,63 +103,6 @@ contact["experiences"]=all_exps
 
 #[*]--------------------------------------------------------------------------------------------[*]
 
-#EDUCATIONS
-n=st.number_input("How many projects information would you like to key in?: ",min_value=0,max_value=20)
-
-all_projects=[]
-
-for number_of_projects in range(n):
-    each_proj={}
-    proj_title=st.text_input("Please provide the title of the project: ", key=number_of_projects, placeholder="Project Title")
-    proj_start_date=st.text_input("Please provide the Start date of the project in (MM/YYYY): ", key=number_of_projects, placeholder="Start Date")
-    proj_content=st.text_area("Please provide the content of the project: ", key=number_of_projects, placeholder="Project Details")
-    each_proj["title"] = proj_title
-    each_proj["date"] = proj_start_date
-    each_proj["content"] = proj_content
-    all_projects.append(each_proj)
-
-contact["projects"]=all_projects
-
-#[*]--------------------------------------------------------------------------------------------[*]
-
-#CERTIFICATIONS
-n=st.number_input("How many projects information would you like to key in?: ",min_value=0,max_value=20)
-
-all_projects=[]
-
-for number_of_projects in range(n):
-    each_proj={}
-    proj_title=st.text_input("Please provide the title of the project: ", key=number_of_projects, placeholder="Project Title")
-    proj_start_date=st.text_input("Please provide the Start date of the project in (MM/YYYY): ", key=number_of_projects, placeholder="Start Date")
-    proj_content=st.text_area("Please provide the content of the project: ", key=number_of_projects, placeholder="Project Details")
-    each_proj["title"] = proj_title
-    each_proj["date"] = proj_start_date
-    each_proj["content"] = proj_content
-    all_projects.append(each_proj)
-
-contact["projects"]=all_projects
-
-#[*]--------------------------------------------------------------------------------------------[*]
-
-#ADDITIONAL INFORMATION
-n=st.number_input("How many projects information would you like to key in?: ",min_value=0,max_value=20)
-
-all_projects=[]
-
-for number_of_projects in range(n):
-    each_proj={}
-    proj_title=st.text_input("Please provide the title of the project: ", key=number_of_projects, placeholder="Project Title")
-    proj_start_date=st.text_input("Please provide the Start date of the project in (MM/YYYY): ", key=number_of_projects, placeholder="Start Date")
-    proj_content=st.text_area("Please provide the content of the project: ", key=number_of_projects, placeholder="Project Details")
-    each_proj["title"] = proj_title
-    each_proj["date"] = proj_start_date
-    each_proj["content"] = proj_content
-    all_projects.append(each_proj)
-
-contact["projects"]=all_projects
-
-#[*]--------------------------------------------------------------------------------------------[*]
-
 #TRANSFERING INFO TO TEMPLATE
 
 #doc = DocxTemplate("template-cv.docx")
