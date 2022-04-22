@@ -38,10 +38,14 @@ def skills_component(contact):
         pt_skills = third.text_area("Enter the list of skills you learnt from PT: ", placeholder=" msfconsole")
         other_skills = fourth.text_area("Enter the list of skills you learnt from other sources: ", placeholder="photoshop / SPSS/ accounting etc.")
 
-    contact["basic_skills"].extend(basic_skills.strip().split("\n"))
-    contact["soc_skills"].extend(soc_skills.strip().split("\n"))
-    contact["pt_skills"].extend(pt_skills.strip().split("\n"))
-    contact["other_skills"].extend(other_skills.strip().split("\n"))
+    if basic_skills.strip() != "":
+        contact["basic_skills"].extend(basic_skills.strip().split("\n"))
+    if soc_skills.strip() != "":
+        contact["soc_skills"].extend(soc_skills.strip().split("\n"))
+    if pt_skills.strip() != "":
+        contact["pt_skills"].extend(pt_skills.strip().split("\n"))
+    if other_skills.strip() != "":
+        contact["other_skills"].extend(other_skills.strip().split("\n"))
 
     return contact
 
