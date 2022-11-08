@@ -1,5 +1,3 @@
-
-
 import streamlit as st
 
 # PERSONAL PARTICULARS
