@@ -59,19 +59,21 @@ def projects_component(contact):
     with st.expander("Project Information"):
         st.info("""(Example)
     <Project Title> Network Research
+    
     <Content / Details of Project > •   Using Wireshark to profile network traffic and analyse packets 
     
+    <Github Link> #github
     """)
         proj_n=st.number_input("How many projects information would you like to key in?: ",min_value=0,max_value=20)
 
-        widget_id = (id for id in range(1, 10_00))
+        widget1_id = (id for id in range(1, 10_00))
         for project_number in range(int(proj_n)):
             each_proj={}
             
             st.write(f"Project #{project_number+1}")
-            proj_title=st.text_input("Please provide the title of the project: ", key=next(widget_id), placeholder="Project Title")
-            proj_end_date=st.text_input("Please provide the completion date of the project in (MMM YYYY): ", key=next(widget_id), placeholder="Jul 2022")
-            proj_content=st.text_area("Please provide the content of the project: ", key=next(widget_id), placeholder="•   Detail 1")
+            proj_title=st.text_input("Please provide the title of the project: ", key=next(widget1_id), placeholder="Project Title")
+            proj_end_date=st.text_input("Please provide the completion date of the project in (MMM YYYY): ", key=next(widget1_id), placeholder="Jul 2022")
+            proj_content=st.text_area("Please provide the content of the project: ", key=next(widget1_id), placeholder="•   Detail 1")
 
             each_proj["title"] = proj_title
             each_proj["date"] = proj_end_date
@@ -92,20 +94,23 @@ def experiences_component(contact):
     with st.expander("Professional Experiences"):
         st.info("""(Example)
     Executive, Company ABC
+    
     •	Top Sales in Company ABC in 3 months
+    
     •	Head a project that had xyz achievement
+    
     •	Quantify your Work Experience
     """)
         exp_n=st.number_input("How many experiences information would you like to key in?: ",min_value=0,max_value=20)
 
-        widget_id = (id for id in range(11, 20_00))
+        widget2_id = (id for id in range(11, 20_00))
         for experience_number in range(int(exp_n)):
             each_exp={}
            
             st.write(f"Experience #{experience_number+1}")
-            exp_title=st.text_input("Please provide the job title,followed by company name: ", key=next(widget_id), placeholder="Position Title, Company Name")
-            exp_period=st.text_input("Please provide the Start - End date of the project in (MMM YYYY - MMM YYYY): ", key=next(widget_id), placeholder="Apr 2022 - Dec 2022")
-            exp_content=st.text_area("Please provide the content of the work experience: ", key=next(widget_id), placeholder="Achievement and Skill Details")
+            exp_title=st.text_input("Please provide the job title,followed by company name: ", key=next(widget2_id), placeholder="Position Title, Company Name")
+            exp_period=st.text_input("Please provide the Start - End date of the project in (MMM YYYY - MMM YYYY): ", key=next(widget2_id), placeholder="Apr 2022 - Dec 2022")
+            exp_content=st.text_area("Please provide the content of the work experience: ", key=next(widget2_id), placeholder="Achievement and Skill Details")
             each_exp["title"] = exp_title
             each_exp["period"] = exp_period
             each_exp["content"] = exp_content
@@ -124,16 +129,16 @@ def educations_component(contact):
     with st.expander("Education"):
         st.info("""(Example)
         
-        Diploma, Institute of Education
+        Diploma, Institute of Education, Year
     """)
         edu_n=st.number_input("How many Education information would you like to key in?: ",min_value=0,max_value=20)
 
-        widget_id = (id for id in range(21, 30_00))
+        widget3_id = (id for id in range(21, 30_00))
         for number_of_edu in range(int(edu_n)):
             each_edu={}
 
-            edu_title=st.text_input("Please provide the name of the education, name of the Institute: ", key=next(widget_id), placeholder="Name of Education, Name of the Institute/School")
-            edu_period=st.text_input("Please provide the duration of the education in (MMM YYYY - MMM YYYY): ", key=next(widget_id), placeholder="Apr 2022 - Dec 2022")
+            edu_title=st.text_input("Please provide the name of the education, name of the Institute: ", key=next(widget3_id), placeholder="Name of Education, Name of the Institute/School")
+            edu_period=st.text_input("Please provide the duration of the education in (MMM YYYY - MMM YYYY): ", key=next(widget3_id), placeholder="Apr 2022 - Dec 2022")
             
             each_edu["title"] = edu_title
             each_edu["period"] = edu_period
@@ -157,12 +162,12 @@ def certifications_component(contact):
     """)
         n=st.number_input("How many Certificates Information would you like to key in?: ",min_value=0,max_value=20)
 
-        widget_id = (id for id in range(31, 40_00))
+        widget4_id = (id for id in range(31, 40_00))
         for number_of_certs in range(int(n)):
             each_cert={}
 
-            cert_title=st.text_input("Please provide the title of the cert, and the issuing organisation: ", key=next(widget_id) , placeholder="Certificate Title, Issuing Organisation")
-            cert_obtained_date=st.text_input("Please provide the date conferred (MMM YYYY): ", key=next(widget_id), placeholder="Jan 2022")
+            cert_title=st.text_input("Please provide the title of the cert, and the issuing organisation: ", key=next(widget4_id) , placeholder="Certificate Title, Issuing Organisation")
+            cert_obtained_date=st.text_input("Please provide the date conferred (MMM YYYY): ", key=next(widget4_id), placeholder="Jan 2022")
             
             each_cert["title"] = cert_title
             each_cert["date"] = cert_obtained_date
@@ -183,20 +188,24 @@ def additional_information_component(contact):
     with st.expander("Additional Information"):
         st.info("""(Example)
     Awards
+    
     •	Scholarship ABC
+    
     •   Top Sales Award 
+    
     Inventions / Publications
+    
     •	Journal / Book Title
     """)
         n=st.number_input("How many Additional information would you like to key in?: ",min_value=0,max_value=20)
 
-        widget_id = (id for id in range(41, 50_00))
+        widget5_id = (id for id in range(41, 50_00))
         for number_of_infos in range(int(n)):
             each_info={}
 
-            info_title=st.text_input("Please provide the Category of the Information: ", key=next(widget_id), placeholder="")
-            info_date=st.text_input("Please provide the date in (MMM YYYY): ", key=next(widget_id), placeholder="Jan 2021")
-            info_content=st.text_area("Please provide the content of the project: ", key=next(widget_id), placeholder="•   Top Sales Award")
+            info_title=st.text_input("Please provide the Category of the Information: ", key=next(widget5_id), placeholder="")
+            info_date=st.text_input("Please provide the date in (MMM YYYY): ", key=next(widget5_id), placeholder="Jan 2021")
+            info_content=st.text_area("Please provide the content of the project: ", key=next(widget5_id), placeholder="•   Top Sales Award")
             each_info["title"] = info_title
             each_info["date"] = info_date
             each_info["content"] = info_content
