@@ -9,7 +9,7 @@ def personal_particulars_component(contact):
         user_nationality = st.text_input('Enter your nationality: ', placeholder=" Nationality")
         user_phone = st.text_input('Enter your phone number: ', placeholder=" Phone Number")
         user_github = st.text_input('Enter your github link, otherwise put N.A.', placeholder=" Github Link")
-        user_career_obj = st.text_area('Describe your career objectives: ', placeholder="Write in Paragraphs about what the employer should know about you, why you want to enter cybersecurity.")
+        user_career_obj = st.text_area('Describe your career objectives: ', placeholder="Write a short about what the employer should know about you, your experience, why you want to enter cybersecurity.")
 
     #ADDING TO RESPECTIVE DICTIONARY KEYS
     contact["name"] = user_name
