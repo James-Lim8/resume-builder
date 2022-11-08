@@ -58,13 +58,13 @@ def projects_component(contact):
 
     with st.expander("Project Information"):
         st.info("""(Example)
-    Network Research (This is the title)
-    •   Using Wireshark to profile network traffic and analyse packets 
-    (This is the content/ details of the project)
+    <Project Title> Network Research
+    <Content / Details of Project > •   Using Wireshark to profile network traffic and analyse packets 
+    
     """)
         proj_n=st.number_input("How many projects information would you like to key in?: ",min_value=0,max_value=20)
 
-        widget_id = (id for id in range(1, 100_00))
+        widget_id = (id for id in range(1, 10_00))
         for project_number in range(int(proj_n)):
             each_proj={}
             
@@ -98,7 +98,7 @@ def experiences_component(contact):
     """)
         exp_n=st.number_input("How many experiences information would you like to key in?: ",min_value=0,max_value=20)
 
-        widget_id = (id for id in range(1, 100_00))
+        widget_id = (id for id in range(11, 20_00))
         for experience_number in range(int(exp_n)):
             each_exp={}
            
@@ -128,7 +128,7 @@ def educations_component(contact):
     """)
         edu_n=st.number_input("How many Education information would you like to key in?: ",min_value=0,max_value=20)
 
-        widget_id = (id for id in range(1, 100_00))
+        widget_id = (id for id in range(21, 30_00))
         for number_of_edu in range(int(edu_n)):
             each_edu={}
 
@@ -157,7 +157,7 @@ def certifications_component(contact):
     """)
         n=st.number_input("How many Certificates Information would you like to key in?: ",min_value=0,max_value=20)
 
-        widget_id = (id for id in range(1, 100_00))
+        widget_id = (id for id in range(31, 40_00))
         for number_of_certs in range(int(n)):
             each_cert={}
 
@@ -190,7 +190,7 @@ def additional_information_component(contact):
     """)
         n=st.number_input("How many Additional information would you like to key in?: ",min_value=0,max_value=20)
 
-        widget_id = (id for id in range(1, 100_00))
+        widget_id = (id for id in range(41, 50_00))
         for number_of_infos in range(int(n)):
             each_info={}
 
