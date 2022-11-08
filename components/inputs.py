@@ -69,16 +69,17 @@ def projects_component(contact):
 
         for project_number in range(int(proj_n)):
             each_proj={}
-
+            count = 0
             st.write(f"Project #{project_number+1}")
-            proj_title=st.text_input("Please provide the title of the project: ", key=project_number, placeholder="Project Title")
-            proj_end_date=st.text_input("Please provide the completion date of the project in (MMM YYYY): ", key=project_number, placeholder="Jul 2022")
-            proj_content=st.text_area("Please provide the content of the project: ", key=project_number, placeholder="•   Detail 1")
+            proj_title=st.text_input("Please provide the title of the project: ", key= count + 1, placeholder="Project Title")
+            proj_end_date=st.text_input("Please provide the completion date of the project in (MMM YYYY): ", key=count + 2, placeholder="Jul 2022")
+            proj_content=st.text_area("Please provide the content of the project: ", key=count + 3, placeholder="•   Detail 1")
 
             each_proj["title"] = proj_title
             each_proj["date"] = proj_end_date
             each_proj["content"] = proj_content
             all_projects.append(each_proj)
+            count += 1
 
     contact["projects"]=all_projects
 
@@ -103,14 +104,16 @@ def experiences_component(contact):
 
         for experience_number in range(int(exp_n)):
             each_exp={}
+            count = 0
             st.write(f"Experience #{experience_number+1}")
-            exp_title=st.text_input("Please provide the job title,followed by company name: ", key=experience_number, placeholder="Position Title, Company Name")
-            exp_period=st.text_input("Please provide the Start - End date of the project in (MMM YYYY - MMM YYYY): ", key=experience_number, placeholder="Apr 2022 - Dec 2022")
-            exp_content=st.text_area("Please provide the content of the work experience: ", key=experience_number, placeholder="Achievement and Skill Details")
+            exp_title=st.text_input("Please provide the job title,followed by company name: ", key=count + 4, placeholder="Position Title, Company Name")
+            exp_period=st.text_input("Please provide the Start - End date of the project in (MMM YYYY - MMM YYYY): ", key=count+5, placeholder="Apr 2022 - Dec 2022")
+            exp_content=st.text_area("Please provide the content of the work experience: ", key=count+6, placeholder="Achievement and Skill Details")
             each_exp["title"] = exp_title
             each_exp["period"] = exp_period
             each_exp["content"] = exp_content
             all_exps.append(each_exp)
+            count += 1
 
     contact["experiences"]=all_exps
 
@@ -130,13 +133,15 @@ def educations_component(contact):
 
         for number_of_edu in range(int(edu_n)):
             each_edu={}
-            edu_title=st.text_input("Please provide the name of the education, name of the Institute: ", key=number_of_edu, placeholder="Name of Education, Name of the Institute/School")
-            edu_period=st.text_input("Please provide the duration of the education in (MMM YYYY - MMM YYYY): ", key=number_of_edu, placeholder="Apr 2022 - Dec 2022")
-            #proj_content=st.text_area("Please provide the content of the project: ", key=number_of_edu, placeholder="Project Details")
+            count = 0
+            edu_title=st.text_input("Please provide the name of the education, name of the Institute: ", key=count + 7, placeholder="Name of Education, Name of the Institute/School")
+            edu_period=st.text_input("Please provide the duration of the education in (MMM YYYY - MMM YYYY): ", key=count + 8, placeholder="Apr 2022 - Dec 2022")
+            
             each_edu["title"] = edu_title
             each_edu["period"] = edu_period
-            #each_proj["content"] = proj_content
+            
             all_edu.append(each_edu)
+            count += 1
 
     contact["educations"]=all_edu
 
@@ -157,13 +162,15 @@ def certifications_component(contact):
 
         for number_of_certs in range(int(n)):
             each_cert={}
-            cert_title=st.text_input("Please provide the title of the cert, and the issuing organisation: ", key=number_of_certs, placeholder="Certificate Title, Issuing Organisation")
-            cert_obtained_date=st.text_input("Please provide the date conferred (MMM YYYY): ", key=number_of_certs, placeholder="Jan 2022")
-            #proj_content=st.text_area("Please provide the content of the project: ", key=number_of_certs, placeholder="Project Details")
+            count = 0
+            cert_title=st.text_input("Please provide the title of the cert, and the issuing organisation: ", key=count + 9 , placeholder="Certificate Title, Issuing Organisation")
+            cert_obtained_date=st.text_input("Please provide the date conferred (MMM YYYY): ", key=count + 10, placeholder="Jan 2022")
+            
             each_cert["title"] = cert_title
             each_cert["date"] = cert_obtained_date
-            #each_proj["content"] = proj_content
+            
             all_certificates.append(each_cert)
+            count += 1
 
     contact["certifications"]=all_certificates
 
@@ -193,13 +200,15 @@ def additional_information_component(contact):
 
         for number_of_infos in range(int(n)):
             each_info={}
-            info_title=st.text_input("Please provide the Category of the Information: ", key=number_of_infos, placeholder="")
-            info_date=st.text_input("Please provide the date in (MMM YYYY): ", key=number_of_infos, placeholder="Jan 2021")
-            info_content=st.text_area("Please provide the content of the project: ", key=number_of_infos, placeholder="•   Top Sales Award")
+            count = 0
+            info_title=st.text_input("Please provide the Category of the Information: ", key=count + 11, placeholder="")
+            info_date=st.text_input("Please provide the date in (MMM YYYY): ", key=count + 12, placeholder="Jan 2021")
+            info_content=st.text_area("Please provide the content of the project: ", key=count + 13, placeholder="•   Top Sales Award")
             each_info["title"] = info_title
             each_info["date"] = info_date
             each_info["content"] = info_content
             all_infos.append(each_info)
+            count += 1
 
     contact["additional_infos"]=all_infos
 
