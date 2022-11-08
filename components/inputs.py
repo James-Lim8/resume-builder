@@ -64,19 +64,20 @@ def projects_component(contact):
     """)
         proj_n=st.number_input("How many projects information would you like to key in?: ",min_value=0,max_value=20)
 
+        widget_id = (id for id in range(1, 100_00))
         for project_number in range(int(proj_n)):
             each_proj={}
-            count = 0
+            
             st.write(f"Project #{project_number+1}")
-            proj_title=st.text_input("Please provide the title of the project: ", key= count + 1, placeholder="Project Title")
-            proj_end_date=st.text_input("Please provide the completion date of the project in (MMM YYYY): ", key=count + 2, placeholder="Jul 2022")
-            proj_content=st.text_area("Please provide the content of the project: ", key=count + 3, placeholder="•   Detail 1")
+            proj_title=st.text_input("Please provide the title of the project: ", key=next(widget_id), placeholder="Project Title")
+            proj_end_date=st.text_input("Please provide the completion date of the project in (MMM YYYY): ", key=next(widget_id), placeholder="Jul 2022")
+            proj_content=st.text_area("Please provide the content of the project: ", key=next(widget_id), placeholder="•   Detail 1")
 
             each_proj["title"] = proj_title
             each_proj["date"] = proj_end_date
             each_proj["content"] = proj_content
             all_projects.append(each_proj)
-            count += 1
+            
 
     contact["projects"]=all_projects
 
