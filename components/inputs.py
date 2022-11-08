@@ -1,5 +1,4 @@
 import streamlit as st
-import id as id
 
 # PERSONAL PARTICULARS
 def personal_particulars_component(contact):
