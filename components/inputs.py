@@ -9,7 +9,7 @@ def personal_particulars_component(contact):
         user_nationality = st.text_input('Enter your nationality: ', placeholder=" Nationality")
         user_phone = st.text_input('Enter your phone number: ', placeholder=" Phone Number")
         user_github = st.text_input('Enter your github link, otherwise put N.A.', placeholder=" Github Link")
-        user_career_obj = st.text_area('Describe your career objectives: ', placeholder="Write a short about what the employer should know about you, your experience, why you want to enter cybersecurity.")
+        user_career_obj = st.text_area('Describe your career objectives: ', placeholder="Write a short summary for what the employer should know about you, 1)your experience, 2) What role are you looking for, 3) why you want to enter cybersecurity and 4) What are you doing about it?.")
 
     #ADDING TO RESPECTIVE DICTIONARY KEYS
     contact["name"] = user_name
@@ -60,9 +60,11 @@ def projects_component(contact):
         st.info("""(Example)
     <Project Title> Network Research
     
-    <Content / Details of Project > •   Using Wireshark to profile network traffic and analyse packets 
+    <Details of Project > 
     
-    <Github Link> #github
+    • Using Wireshark to profile network traffic and analyse packets 
+    
+    <Github Link> #github link
     """)
         proj_n=st.number_input("How many projects information would you like to key in?: ",min_value=0,max_value=20)
 
@@ -97,9 +99,12 @@ def experiences_component(contact):
     
     •	Top Sales in Company ABC in 3 months
     
+    •	Responded to and solved a <problem> within X <period of time>  
+    
     •	Head a project that had xyz achievement
     
-    •	Quantify your Work Experience
+    # Note:	Quantify your Work Experience
+    # Note: Place the work achievement that is closest to the job that you're applying for at the top! 
     """)
         exp_n=st.number_input("How many experiences information would you like to key in?: ",min_value=0,max_value=20)
 
@@ -128,8 +133,11 @@ def educations_component(contact):
     all_edu=[]
     with st.expander("Education"):
         st.info("""(Example)
-        
-        Diploma, Institute of Education, Year
+        Centre for Cybersecurity
+            •	Intro to Cybersecurity    <MM / YYYY>
+            •	Network Research    <MM / YYYY>
+        Diploma Name, Institute of Education, Year of Graduation
+        Degree Name, Institute Name, Year of Graduation
     """)
         edu_n=st.number_input("How many Education information would you like to key in?: ",min_value=0,max_value=20)
 
